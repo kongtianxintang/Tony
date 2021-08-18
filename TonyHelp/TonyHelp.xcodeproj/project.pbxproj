@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0071742A36F0FADD56A2A041 /* Pods_TonyHelp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCEFB428E5608CAB8807ACB /* Pods_TonyHelp.framework */; };
 		D0064A1E26A28EA100AD764E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0064A1D26A28EA100AD764E /* AppDelegate.swift */; };
 		D0064A2026A28EA100AD764E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0064A1F26A28EA100AD764E /* SceneDelegate.swift */; };
 		D0064A2226A28EA100AD764E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0064A2126A28EA100AD764E /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4DCEFB428E5608CAB8807ACB /* Pods_TonyHelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TonyHelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		755BFF8CCF7D0983A5D0F9B4 /* Pods-TonyHelp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TonyHelp.debug.xcconfig"; path = "Target Support Files/Pods-TonyHelp/Pods-TonyHelp.debug.xcconfig"; sourceTree = "<group>"; };
+		C54125899968D90E6AF94636 /* Pods-TonyHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TonyHelp.release.xcconfig"; path = "Target Support Files/Pods-TonyHelp/Pods-TonyHelp.release.xcconfig"; sourceTree = "<group>"; };
 		D0064A1A26A28EA100AD764E /* TonyHelp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TonyHelp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0064A1D26A28EA100AD764E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0064A1F26A28EA100AD764E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0071742A36F0FADD56A2A041 /* Pods_TonyHelp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F39F8E615825E843E2276CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DCEFB428E5608CAB8807ACB /* Pods_TonyHelp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1DD0EF4933FE16196AF7E1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				755BFF8CCF7D0983A5D0F9B4 /* Pods-TonyHelp.debug.xcconfig */,
+				C54125899968D90E6AF94636 /* Pods-TonyHelp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D0064A1126A28EA100AD764E = {
 			isa = PBXGroup;
 			children = (
 				D0064A1C26A28EA100AD764E /* TonyHelp */,
 				D0064A1B26A28EA100AD764E /* Products */,
+				C1DD0EF4933FE16196AF7E1B /* Pods */,
+				9F39F8E615825E843E2276CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0064A2E26A28EA200AD764E /* Build configuration list for PBXNativeTarget "TonyHelp" */;
 			buildPhases = (
+				A3C91A4D3F49ACD2EB85835D /* [CP] Check Pods Manifest.lock */,
 				D0064A1626A28EA100AD764E /* Sources */,
 				D0064A1726A28EA100AD764E /* Frameworks */,
 				D0064A1826A28EA100AD764E /* Resources */,
+				A165F3AADDEFA6F003D934F7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A165F3AADDEFA6F003D934F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TonyHelp/Pods-TonyHelp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TonyHelp/Pods-TonyHelp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TonyHelp/Pods-TonyHelp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C91A4D3F49ACD2EB85835D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TonyHelp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0064A1626A28EA100AD764E /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		D0064A2F26A28EA200AD764E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 755BFF8CCF7D0983A5D0F9B4 /* Pods-TonyHelp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +373,7 @@
 		};
 		D0064A3026A28EA200AD764E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54125899968D90E6AF94636 /* Pods-TonyHelp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
