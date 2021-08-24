@@ -25,5 +25,7 @@ target 'TonyHelp' do
     pod 'SVProgressHUD'
     # toast
     pod 'Toaster'
+    #
+#    pod 'CircleMenu'
 
 end

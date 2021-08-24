@@ -1,15 +1,7 @@
-/*********************************************************************************
- * 版权所有,2017,lisir.
- * Copyright(C),lisir, LTD.All rights reserved.
- * project:
- * Author:lisir
- * Date:  17/05/11
- * QQ/Tel/Mail:
- * Description:对NSManagedObject对象扩展
- * Others:
- * Modifier:
- * Reason:
- **********************************************************************************/
+/*
+ @Desc: 对NSManagedObject对象扩展
+ @Date: 2021/8/19
+ */
 import Foundation
 import UIKit
 import CoreData
@@ -59,6 +51,22 @@ extension NSManagedObject:DBProtocol {
         }
     }
     
+    //MARK: 查询
+    static func fetchObject(_ sortKey: String)-> Array<NSFetchRequestResult>? {
+        guard let context = returnContext() else { return nil }
+        let tName = NSStringFromClass(self)
+        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName:tName);
+        let sort = NSSortDescriptor.init(key: sortKey, ascending: true)
+        request.sortDescriptors = [sort]
+        let fetchController = NSFetchedResultsController.init(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        do {
+            try fetchController.performFetch()
+            return fetchController.fetchedObjects
+        } catch {
+            assertionFailure("fetch错误=\(error)")
+            return nil
+        }
+    }
     //MARK:更新
     static func update(){
         coreDataSave(with: nil);

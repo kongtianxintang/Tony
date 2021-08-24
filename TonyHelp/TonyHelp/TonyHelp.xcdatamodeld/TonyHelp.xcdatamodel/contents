@@ -3,7 +3,21 @@
     <entity name="AppKey" representedClassName="AppKey" syncable="YES">
         <attribute name="openid" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="record" inverseEntity="User"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="surplus" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String"/>
+        <relationship name="record" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Record" inverseName="user" inverseEntity="Record"/>
+    </entity>
     <elements>
         <element name="AppKey" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="User" positionX="-54" positionY="0" width="128" height="119"/>
+        <element name="Record" positionX="-36" positionY="9" width="128" height="59"/>
     </elements>
 </model>

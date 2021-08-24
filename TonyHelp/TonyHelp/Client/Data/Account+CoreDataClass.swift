@@ -1,16 +1,7 @@
-/*********************************************************************************
- * 版权所有,2017,lisir.
- * Copyright(C),lisir, LTD.All rights reserved.
- * project:
- * Author:lisir
- * Date:  17/05/27
- * QQ/Tel/Mail:
- * Description:保存在app中的账号密码
- * Others:
- * Modifier:
- * Reason:
- **********************************************************************************/
-
+/*
+ @Desc: 保存在app中的账号密码
+ @Date: 2021/8/19
+ */
 import Foundation
 import CoreData
 

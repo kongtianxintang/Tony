@@ -1,15 +1,7 @@
-/*********************************************************************************
- * 版权所有,2017,lisir.
- * Copyright(C),lisir, LTD.All rights reserved.
- * project:
- * Author:lisir
- * Date:  17/05/11
- * QQ/Tel/Mail:
- * Description:app的开启钥匙
- * Others:
- * Modifier:
- * Reason:
- **********************************************************************************/
+/*
+ @Desc: app的开启钥匙
+ @Date: 2021/8/19
+ */
 
 import Foundation
 import CoreData
