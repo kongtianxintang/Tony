@@ -52,4 +52,13 @@ extension UIView {
         }
         self.layer.add(scale, forKey: nil)
     }
+    /// stoke 动画
+    func th_strokeEndAnimation() {
+        let stroke = customize(CABasicAnimation(keyPath: "strokeEnd")) {
+            $0.fromValue = 0
+            $0.toValue = 1
+            $0.duration = 0.25
+        }
+        self.layer.add(stroke, forKey: nil)
+    }
 }

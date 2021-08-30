@@ -1,14 +1,11 @@
 {
   "images" : [
     {
-      "idiom" : "universal"
-    },
-    {
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "search-btn2.pdf",
+      "filename" : "icon_search@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

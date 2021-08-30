@@ -30,6 +30,7 @@
 		D01060BD26CDE33D001626A0 /* PwActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01060BA26CDE33D001626A0 /* PwActionView.swift */; };
 		D01060C026CDE52C001626A0 /* TonyHelp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D01060BE26CDE52C001626A0 /* TonyHelp.xcdatamodeld */; };
 		D01060C326D381A9001626A0 /* THTabbarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01060C226D381A9001626A0 /* THTabbarMenu.swift */; };
+		D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */; };
 		D0D39D9026D5134500DAEC98 /* THFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */; };
 		D0D39D9226D5139B00DAEC98 /* THViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		D01060BA26CDE33D001626A0 /* PwActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PwActionView.swift; sourceTree = "<group>"; };
 		D01060BF26CDE52C001626A0 /* TonyHelp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TonyHelp.xcdatamodel; sourceTree = "<group>"; };
 		D01060C226D381A9001626A0 /* THTabbarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THTabbarMenu.swift; sourceTree = "<group>"; };
+		D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMenuLoaderView.swift; sourceTree = "<group>"; };
 		D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFloatExtension.swift; sourceTree = "<group>"; };
 		D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				D01060C226D381A9001626A0 /* THTabbarMenu.swift */,
+				D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				D01060BB26CDE33D001626A0 /* PwToast.swift in Sources */,
 				D01060B126CDE30D001626A0 /* ExtensionCoreData.swift in Sources */,
 				D01060B026CDE30D001626A0 /* Account+CoreDataProperties.swift in Sources */,
+				D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */,
 				D01060C026CDE52C001626A0 /* TonyHelp.xcdatamodeld in Sources */,
 				D01060C326D381A9001626A0 /* THTabbarMenu.swift in Sources */,
 				D01060BD26CDE33D001626A0 /* PwActionView.swift in Sources */,

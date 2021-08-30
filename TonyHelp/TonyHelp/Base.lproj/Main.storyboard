@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEY-SQ-K1l" customClass="THTabbarMenu" customModule="TonyHelp" customModuleProvider="target">
-                                <rect key="frame" x="87" y="782" width="240" height="56"/>
+                                <rect key="frame" x="87" y="784" width="240" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="EST-Og-QPj"/>
-                                    <constraint firstAttribute="height" constant="56" id="RVC-ql-B0p"/>
+                                    <constraint firstAttribute="height" constant="54" id="RVC-ql-B0p"/>
                                 </constraints>
                             </view>
                         </subviews>
