@@ -15,7 +15,7 @@ class THTabbarMenu: UIView {
     private lazy var mLeftBt = UIButton()
     private lazy var mRightBt = UIButton()
     private var isBounceAnimating: Bool = false
-    private var isMenuOpen: Bool = false
+    private var isMenuOpen: Bool = true
     private var customNormalIconView: UIImageView?
     private var customSelectedIconView: UIImageView?
     private lazy var mLeftLoader = THMenuLoaderView.init(.Left)
@@ -56,6 +56,8 @@ private extension THTabbarMenu {
         configureSubviews()
         
         commonInit()
+        
+        menuAnimation()
     }
     
     func layoutBt() {
