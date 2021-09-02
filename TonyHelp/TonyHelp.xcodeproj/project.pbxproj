@@ -30,6 +30,10 @@
 		D01060BD26CDE33D001626A0 /* PwActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01060BA26CDE33D001626A0 /* PwActionView.swift */; };
 		D01060C026CDE52C001626A0 /* TonyHelp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D01060BE26CDE52C001626A0 /* TonyHelp.xcdatamodeld */; };
 		D01060C326D381A9001626A0 /* THTabbarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01060C226D381A9001626A0 /* THTabbarMenu.swift */; };
+		D025AAD326E0A057001721C4 /* THAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025AAD126E0A057001721C4 /* THAddViewController.swift */; };
+		D025AAD426E0A057001721C4 /* THAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D025AAD226E0A057001721C4 /* THAddViewController.xib */; };
+		D025AAD826E0E708001721C4 /* THUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025AAD626E0E708001721C4 /* THUserCell.swift */; };
+		D025AAD926E0E708001721C4 /* THUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D025AAD726E0E708001721C4 /* THUserCell.xib */; };
 		D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */; };
 		D0D39D9026D5134500DAEC98 /* THFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */; };
 		D0D39D9226D5139B00DAEC98 /* THViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */; };
@@ -63,6 +67,10 @@
 		D01060BA26CDE33D001626A0 /* PwActionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PwActionView.swift; sourceTree = "<group>"; };
 		D01060BF26CDE52C001626A0 /* TonyHelp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TonyHelp.xcdatamodel; sourceTree = "<group>"; };
 		D01060C226D381A9001626A0 /* THTabbarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THTabbarMenu.swift; sourceTree = "<group>"; };
+		D025AAD126E0A057001721C4 /* THAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THAddViewController.swift; sourceTree = "<group>"; };
+		D025AAD226E0A057001721C4 /* THAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THAddViewController.xib; sourceTree = "<group>"; };
+		D025AAD626E0E708001721C4 /* THUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THUserCell.swift; sourceTree = "<group>"; };
+		D025AAD726E0E708001721C4 /* THUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THUserCell.xib; sourceTree = "<group>"; };
 		D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMenuLoaderView.swift; sourceTree = "<group>"; };
 		D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFloatExtension.swift; sourceTree = "<group>"; };
 		D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewExtension.swift; sourceTree = "<group>"; };
@@ -120,7 +128,6 @@
 			children = (
 				D010609926CCF582001626A0 /* Client */,
 				D0064A1D26A28EA100AD764E /* AppDelegate.swift */,
-				D0064A2126A28EA100AD764E /* ViewController.swift */,
 				D0064A2326A28EA100AD764E /* Main.storyboard */,
 				D0064A2626A28EA200AD764E /* Assets.xcassets */,
 				D0064A2826A28EA200AD764E /* LaunchScreen.storyboard */,
@@ -143,6 +150,8 @@
 		D010609A26CCF58F001626A0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D025AAD526E0E650001721C4 /* Home */,
+				D025AACF26E0A013001721C4 /* Add */,
 				D010609B26CCF821001626A0 /* Password */,
 			);
 			path = Module;
@@ -209,6 +218,33 @@
 				D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D025AACF26E0A013001721C4 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				D025AAD026E0A01A001721C4 /* Controller */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		D025AAD026E0A01A001721C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D025AAD126E0A057001721C4 /* THAddViewController.swift */,
+				D025AAD226E0A057001721C4 /* THAddViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D025AAD526E0E650001721C4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D0064A2126A28EA100AD764E /* ViewController.swift */,
+				D025AAD626E0E708001721C4 /* THUserCell.swift */,
+				D025AAD726E0E708001721C4 /* THUserCell.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		D0D39D8E26D5132600DAEC98 /* Extension */ = {
@@ -281,9 +317,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D025AAD426E0A057001721C4 /* THAddViewController.xib in Resources */,
 				D01060A726CD1182001626A0 /* PwNumberCell.xib in Resources */,
 				D010609F26CCFB7D001626A0 /* THPasswordController.xib in Resources */,
 				D0064A2A26A28EA200AD764E /* LaunchScreen.storyboard in Resources */,
+				D025AAD926E0E708001721C4 /* THUserCell.xib in Resources */,
 				D0064A2726A28EA200AD764E /* Assets.xcassets in Resources */,
 				D0064A2526A28EA100AD764E /* Main.storyboard in Resources */,
 			);
@@ -343,6 +381,7 @@
 				D010609E26CCFB7D001626A0 /* THPasswordController.swift in Sources */,
 				D01060A126CCFC9C001626A0 /* PwSecureView.swift in Sources */,
 				D01060A526CD117D001626A0 /* PwNumberCell.swift in Sources */,
+				D025AAD326E0A057001721C4 /* THAddViewController.swift in Sources */,
 				D01060BC26CDE33D001626A0 /* PwDisplayManager.swift in Sources */,
 				D0064A2226A28EA100AD764E /* ViewController.swift in Sources */,
 				D01060B426CDE30D001626A0 /* AppKey+CoreDataProperties.swift in Sources */,
@@ -351,6 +390,7 @@
 				D01060B126CDE30D001626A0 /* ExtensionCoreData.swift in Sources */,
 				D01060B026CDE30D001626A0 /* Account+CoreDataProperties.swift in Sources */,
 				D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */,
+				D025AAD826E0E708001721C4 /* THUserCell.swift in Sources */,
 				D01060C026CDE52C001626A0 /* TonyHelp.xcdatamodeld in Sources */,
 				D01060C326D381A9001626A0 /* THTabbarMenu.swift in Sources */,
 				D01060BD26CDE33D001626A0 /* PwActionView.swift in Sources */,
