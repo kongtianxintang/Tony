@@ -9,15 +9,17 @@ class THUserCell: UITableViewCell {
 
     static let reuse = "user_cell"
     
+    @IBOutlet weak var nickname: UILabel!
+    @IBOutlet weak var numLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        nickname.layer.borderWidth = 0.5
+        nickname.layer.borderColor = UIColor.cyan.cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
 }

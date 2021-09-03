@@ -10,7 +10,7 @@ class PwToast {
     
     class func showToast(text:String?){
         let t = Toast.init(text:text , delay: 0, duration: 2);
-        t.show();
+        t.show()
     }
 
 }

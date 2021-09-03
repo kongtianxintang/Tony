@@ -39,6 +39,8 @@ private extension ViewController {
         let nib = UINib.init(nibName: "THUserCell", bundle: .main)
         mTableView.register(nib, forCellReuseIdentifier: THUserCell.reuse)
         mTableView.tableFooterView = UIView()
+        mTableView.rowHeight = 96
+        mTableView.separatorStyle = .none
     }
 }
 
@@ -68,13 +70,13 @@ extension ViewController: THTabbarMenuDelegate {
 //MARK:UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 2
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: THUserCell.reuse, for: indexPath) as! THUserCell
         return cell
     }
 }

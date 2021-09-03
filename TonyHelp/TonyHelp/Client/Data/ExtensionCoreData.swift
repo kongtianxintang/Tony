@@ -14,6 +14,14 @@ extension NSManagedObject:DBProtocol {
         let entity = NSEntityDescription.insertNewObject(forEntityName: NSStringFromClass(name), into: context)
         return entity;
     }
+    /// 创建 插入的entity
+    static func createEntiy()-> NSManagedObject?{
+        guard let context = returnContext() else { return nil }
+        let tName = NSStringFromClass(self)
+        let entity = NSEntityDescription.insertNewObject(forEntityName: tName, into: context)
+        return entity
+    }
+    
     //MARK:删除所有这个类所有元素
     static func deleteAll(className name:AnyClass,sortKey key:String){
         guard let context = returnContext() else { assertionFailure("context 为 空");return  };

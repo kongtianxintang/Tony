@@ -34,6 +34,8 @@
 		D025AAD426E0A057001721C4 /* THAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D025AAD226E0A057001721C4 /* THAddViewController.xib */; };
 		D025AAD826E0E708001721C4 /* THUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025AAD626E0E708001721C4 /* THUserCell.swift */; };
 		D025AAD926E0E708001721C4 /* THUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D025AAD726E0E708001721C4 /* THUserCell.xib */; };
+		D025AADB26E1EB2C001721C4 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025AADA26E1EB2C001721C4 /* DateExtension.swift */; };
+		D025AADE26E1EB68001721C4 /* FKToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025AADD26E1EB68001721C4 /* FKToast.swift */; };
 		D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */; };
 		D0D39D9026D5134500DAEC98 /* THFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */; };
 		D0D39D9226D5139B00DAEC98 /* THViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */; };
@@ -71,6 +73,8 @@
 		D025AAD226E0A057001721C4 /* THAddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THAddViewController.xib; sourceTree = "<group>"; };
 		D025AAD626E0E708001721C4 /* THUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THUserCell.swift; sourceTree = "<group>"; };
 		D025AAD726E0E708001721C4 /* THUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THUserCell.xib; sourceTree = "<group>"; };
+		D025AADA26E1EB2C001721C4 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		D025AADD26E1EB68001721C4 /* FKToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FKToast.swift; sourceTree = "<group>"; };
 		D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMenuLoaderView.swift; sourceTree = "<group>"; };
 		D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFloatExtension.swift; sourceTree = "<group>"; };
 		D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewExtension.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		D01060B526CDE33D001626A0 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				D025AADC26E1EB68001721C4 /* Toast */,
 				D0D39D8E26D5132600DAEC98 /* Extension */,
 				D01060C126D38154001626A0 /* View */,
 				D01060B626CDE33D001626A0 /* Manager */,
@@ -247,9 +252,18 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		D025AADC26E1EB68001721C4 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				D025AADD26E1EB68001721C4 /* FKToast.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 		D0D39D8E26D5132600DAEC98 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D025AADA26E1EB2C001721C4 /* DateExtension.swift */,
 				D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */,
 				D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */,
 			);
@@ -388,8 +402,10 @@
 				D0064A1E26A28EA100AD764E /* AppDelegate.swift in Sources */,
 				D01060BB26CDE33D001626A0 /* PwToast.swift in Sources */,
 				D01060B126CDE30D001626A0 /* ExtensionCoreData.swift in Sources */,
+				D025AADE26E1EB68001721C4 /* FKToast.swift in Sources */,
 				D01060B026CDE30D001626A0 /* Account+CoreDataProperties.swift in Sources */,
 				D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */,
+				D025AADB26E1EB2C001721C4 /* DateExtension.swift in Sources */,
 				D025AAD826E0E708001721C4 /* THUserCell.swift in Sources */,
 				D01060C026CDE52C001626A0 /* TonyHelp.xcdatamodeld in Sources */,
 				D01060C326D381A9001626A0 /* THTabbarMenu.swift in Sources */,
