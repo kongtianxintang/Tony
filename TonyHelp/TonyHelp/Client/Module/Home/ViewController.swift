@@ -11,13 +11,13 @@ class ViewController: UIViewController {
     //MARK: 底部菜单栏
     @IBOutlet weak var mMenuView: THTabbarMenu!
     @IBOutlet weak var mTableView: UITableView!
-    private var mResultController: NSFetchedResultsController<NSFetchRequestResult>?
+    private var mResultController: NSFetchedResultsController<User>?
     
     //MARK: 生命周期
     override func viewDidLoad() {
         super.viewDidLoad()
         configureSubviews()
-        test()
+        fetchResults()
     }
 
 
@@ -44,12 +44,21 @@ private extension ViewController {
     }
 }
 
-//MARK: 
+//MARK: 数据
 private extension ViewController {
-    
-    func test(){
-        let list = User.fetchObject("date")
-        print("获取到->\(list)")
+    /// 获取数据
+    func fetchResults(){
+        guard let controller = User.createResultsController("date") as? NSFetchedResultsController<User> else {
+            PwToast.showToast(text: "创建数据获取对象失败")
+            return
+        }
+        do {
+            try controller.performFetch()
+            controller.delegate = self
+            mResultController = controller
+        } catch let error {
+            PwToast.showToast(text: "获取数据失败:\(error)")
+        }
     }
     
 }
@@ -69,14 +78,45 @@ extension ViewController: THTabbarMenuDelegate {
 
 //MARK:UITableViewDataSource
 extension ViewController: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        guard let sections = mResultController?.sections else { return 0 }
+        return sections.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        guard let sections = mResultController?.sections else { return 0 }
+        return sections[section].numberOfObjects
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: THUserCell.reuse, for: indexPath) as! THUserCell
+        if  let user = mResultController?.object(at: indexPath) {
+            cell.setUser(user)
+        }
         return cell
+    }
+}
+
+//MARK: NSFetchedResultsControllerDelegate
+extension ViewController: NSFetchedResultsControllerDelegate {
+
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            mTableView.reloadData()
+        case .insert:
+            if newIndexPath != nil {
+                mTableView.insertRows(at: [newIndexPath!], with: .automatic)
+            }
+        case .move:
+            mTableView.reloadData()
+        case .update:
+            if indexPath != nil {
+                mTableView.reloadRows(at: [indexPath!], with: .automatic)
+            }
+        @unknown default:
+            mTableView.reloadData()
+        }
     }
 }

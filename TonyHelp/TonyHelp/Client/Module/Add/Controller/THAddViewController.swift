@@ -45,8 +45,9 @@ class THAddViewController: UIViewController {
         entiy.tel = tel
         entiy.surplus = num
         
-        User.coreDataSave { flag in
-            print("--是否保存成功-->\(flag)")
+        User.coreDataSave {[weak self] flag in
+            self?.dismiss(animated: true, completion: nil)
         }
     }
+    
 }

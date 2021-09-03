@@ -58,6 +58,16 @@ extension NSManagedObject:DBProtocol {
             return nil;
         }
     }
+    //MARK: 获取fetch controller
+    static func createResultsController(_ sortKey: String)-> NSFetchedResultsController<NSFetchRequestResult>?{
+        guard let context = returnContext() else { return nil }
+        let tName = NSStringFromClass(self)
+        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName:tName);
+        let sort = NSSortDescriptor.init(key: sortKey, ascending: true)
+        request.sortDescriptors = [sort]
+        let fetchController = NSFetchedResultsController.init(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        return fetchController
+    }
     
     //MARK: 查询
     static func fetchObject(_ sortKey: String)-> Array<NSFetchRequestResult>? {
