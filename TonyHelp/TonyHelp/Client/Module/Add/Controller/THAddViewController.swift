@@ -36,10 +36,15 @@ class THAddViewController: UIViewController {
             PwToast.showToast(text: "请输入次数")
             return
         }
+        var id: Int64 = 1
+        if let count = User.fetchObject("id")?.count {
+            id = Int64(count + 1)
+        }
         guard let entiy = User.createEntiy() as? User else {
             PwToast.showToast(text: "创建entiy失败")
             return
         }
+        entiy.id = id
         entiy.date = Date()
         entiy.name = nickname
         entiy.tel = tel
