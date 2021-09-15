@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="56" id="RF2-Rd-goU"/>
                                     <constraint firstAttribute="width" constant="56" id="aRv-dM-anb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -37,7 +37,19 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wA-mL-pes">
-                                <rect key="frame" x="392.5" y="39.5" width="37.5" height="18"/>
+                                <rect key="frame" x="399" y="41.5" width="31" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-rh-SdR">
+                                <rect key="frame" x="80" y="20.5" width="37.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqV-uE-Yjq">
+                                <rect key="frame" x="80" y="58.5" width="37.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,8 +59,12 @@
                         <constraints>
                             <constraint firstItem="7wA-mL-pes" firstAttribute="centerY" secondItem="1yL-vn-QKo" secondAttribute="centerY" id="Ihx-GQ-J4u"/>
                             <constraint firstAttribute="trailing" secondItem="7wA-mL-pes" secondAttribute="trailing" constant="12" id="KdU-l1-ELe"/>
+                            <constraint firstItem="PEd-rh-SdR" firstAttribute="leading" secondItem="CKc-9v-JFe" secondAttribute="trailing" constant="12" id="N0y-WQ-jyJ"/>
                             <constraint firstItem="CKc-9v-JFe" firstAttribute="centerY" secondItem="1yL-vn-QKo" secondAttribute="centerY" id="Ont-pS-unt"/>
+                            <constraint firstItem="aqV-uE-Yjq" firstAttribute="bottom" secondItem="CKc-9v-JFe" secondAttribute="bottom" id="cCN-rz-bCC"/>
                             <constraint firstItem="CKc-9v-JFe" firstAttribute="leading" secondItem="1yL-vn-QKo" secondAttribute="leading" constant="12" id="ex5-lq-QB5"/>
+                            <constraint firstItem="PEd-rh-SdR" firstAttribute="top" secondItem="CKc-9v-JFe" secondAttribute="top" id="fa2-k0-5bw"/>
+                            <constraint firstItem="aqV-uE-Yjq" firstAttribute="leading" secondItem="PEd-rh-SdR" secondAttribute="leading" id="uhT-f9-EZH"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -68,8 +84,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="nameLabel" destination="PEd-rh-SdR" id="3EE-lB-dba"/>
                 <outlet property="nickname" destination="CKc-9v-JFe" id="Pbk-VZ-MoT"/>
                 <outlet property="numLabel" destination="7wA-mL-pes" id="pnZ-bE-JGB"/>
+                <outlet property="telLabel" destination="aqV-uE-Yjq" id="FHf-aT-kNs"/>
             </connections>
             <point key="canvasLocation" x="227.536231884058" y="66.629464285714278"/>
         </tableViewCell>
@@ -77,6 +95,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

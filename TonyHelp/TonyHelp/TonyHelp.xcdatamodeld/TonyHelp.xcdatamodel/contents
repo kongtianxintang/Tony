@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AppKey" representedClassName="AppKey" syncable="YES">
         <attribute name="openid" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="record" inverseEntity="User"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
@@ -13,11 +15,12 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="surplus" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="tel" optional="YES" attributeType="String"/>
+        <attribute name="total" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="record" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Record" inverseName="user" inverseEntity="Record"/>
     </entity>
     <elements>
         <element name="AppKey" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="User" positionX="-54" positionY="0" width="128" height="119"/>
-        <element name="Record" positionX="-36" positionY="9" width="128" height="59"/>
+        <element name="Record" positionX="-36" positionY="9" width="128" height="89"/>
+        <element name="User" positionX="-54" positionY="0" width="128" height="134"/>
     </elements>
 </model>

@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 private extension ViewController {
     /// view的代理 及 其他的设置
     func configureSubviews() {
-        navigationItem.title = "主页"
+        navigationItem.title = "控制台"
         configureMenuView()
         configureTableView()
     }

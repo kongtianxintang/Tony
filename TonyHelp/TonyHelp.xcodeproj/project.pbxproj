@@ -39,6 +39,8 @@
 		D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */; };
 		D0D39D9026D5134500DAEC98 /* THFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */; };
 		D0D39D9226D5139B00DAEC98 /* THViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */; };
+		D0FE85E826F1D8B90095451B /* THUserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85E726F1D8B90095451B /* THUserExtension.swift */; };
+		D0FE85EA26F1E1EA0095451B /* THRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85E926F1E1EA0095451B /* THRecordExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMenuLoaderView.swift; sourceTree = "<group>"; };
 		D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFloatExtension.swift; sourceTree = "<group>"; };
 		D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewExtension.swift; sourceTree = "<group>"; };
+		D0FE85E726F1D8B90095451B /* THUserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THUserExtension.swift; sourceTree = "<group>"; };
+		D0FE85E926F1E1EA0095451B /* THRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THRecordExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +187,8 @@
 				D01060AC26CDE30D001626A0 /* Account+CoreDataClass.swift */,
 				D01060AD26CDE30D001626A0 /* AppKey+CoreDataClass.swift */,
 				D01060AE26CDE30D001626A0 /* AppKey+CoreDataProperties.swift */,
+				D0FE85E726F1D8B90095451B /* THUserExtension.swift */,
+				D0FE85E926F1E1EA0095451B /* THRecordExtension.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				D0064A2226A28EA100AD764E /* ViewController.swift in Sources */,
 				D01060B426CDE30D001626A0 /* AppKey+CoreDataProperties.swift in Sources */,
 				D0064A1E26A28EA100AD764E /* AppDelegate.swift in Sources */,
+				D0FE85E826F1D8B90095451B /* THUserExtension.swift in Sources */,
 				D01060BB26CDE33D001626A0 /* PwToast.swift in Sources */,
 				D01060B126CDE30D001626A0 /* ExtensionCoreData.swift in Sources */,
 				D025AADE26E1EB68001721C4 /* FKToast.swift in Sources */,
@@ -409,6 +416,7 @@
 				D025AAD826E0E708001721C4 /* THUserCell.swift in Sources */,
 				D01060C026CDE52C001626A0 /* TonyHelp.xcdatamodeld in Sources */,
 				D01060C326D381A9001626A0 /* THTabbarMenu.swift in Sources */,
+				D0FE85EA26F1E1EA0095451B /* THRecordExtension.swift in Sources */,
 				D01060BD26CDE33D001626A0 /* PwActionView.swift in Sources */,
 				D01060A326CCFCEE001626A0 /* PwNumberLayout.swift in Sources */,
 				D0D39D9026D5134500DAEC98 /* THFloatExtension.swift in Sources */,
