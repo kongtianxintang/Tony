@@ -5,6 +5,7 @@
 
 import UIKit
 import CoreData
+import Combine
 
 class ViewController: UIViewController {
 
@@ -12,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var mMenuView: THTabbarMenu!
     @IBOutlet weak var mTableView: UITableView!
     private var mResultController: NSFetchedResultsController<User>?
+    private var mSearchVC: UISearchController?
     
     //MARK: 生命周期
     override func viewDidLoad() {
@@ -48,7 +50,7 @@ private extension ViewController {
 private extension ViewController {
     /// 获取数据
     func fetchResults(){
-        guard let controller = User.createResultsController("date") as? NSFetchedResultsController<User> else {
+        guard let controller = User.createResultsController("date",false) as? NSFetchedResultsController<User> else {
             PwToast.showToast(text: "创建数据获取对象失败")
             return
         }
@@ -65,19 +67,25 @@ private extension ViewController {
 //MARK: THTabbarMenuDelegate
 extension ViewController: THTabbarMenuDelegate {
     func menuViewDidClick(_ alignment: THMenuLoaderAlignment, _ menu: THTabbarMenu) {
+        var vc: UIViewController!
         switch alignment {
         case .Right:
-            let  vc = THAddViewController()
-            present(vc, animated: true, completion: nil)
+            vc = THAddViewController()
         default:
-            //todo: 去搜索页面
-            break
+            let resultVC = THResultsController()
+            resultVC.delegate = self
+            let svc = UISearchController.init(searchResultsController: resultVC)
+            svc.searchResultsUpdater = self
+            svc.delegate = self
+            mSearchVC = svc
+            vc = svc
         }
+        present(vc, animated: true, completion: nil)
     }
 }
 
 //MARK:UITableViewDataSource
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource,UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let sections = mResultController?.sections else { return 0 }
@@ -95,6 +103,11 @@ extension ViewController: UITableViewDataSource {
             cell.setUser(user)
         }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if  let user = mResultController?.object(at: indexPath) {
+            pushUserDetail(user)
+        }
     }
 }
 
@@ -118,5 +131,52 @@ extension ViewController: NSFetchedResultsControllerDelegate {
         @unknown default:
             mTableView.reloadData()
         }
+    }
+}
+//MARK: UISearchResultsUpdating
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let resultVC = searchController.searchResultsController as? THResultsController else { return }
+        if let text = searchController.searchBar.text, text.count > 0 {
+            if let objects = mResultController?.fetchedObjects {
+                let array = objects.filter { obj in
+                    if let name = obj.name {
+                        if name.contains(text) {
+                            return true
+                        }
+                    }
+                    if let tel = obj.tel {
+                        if tel.contains(text) {
+                            return true
+                        }
+                    }
+                    return false
+                }
+                resultVC.setData(array)
+            }
+        }else {
+            resultVC.setData(nil)
+        }
+    }
+}
+//MARK: THResultsControllerDelegate
+extension ViewController: THResultsControllerDelegate {
+    func resultsControllerDidSelect(_ user: User) {
+        mSearchVC?.dismiss(animated: true, completion: {[weak self] in
+            self?.pushUserDetail(user)
+            self?.mSearchVC = nil
+        })
+    }
+    
+    private func pushUserDetail(_ user: User){
+        let vc = THDetailViewController()
+        vc.setUser(user)
+        show(vc, sender: nil)
+    }
+}
+//MARK: UISearchControllerDelegate
+extension ViewController: UISearchControllerDelegate {
+    func didDismissSearchController(_ searchController: UISearchController) {
+        mSearchVC = nil
     }
 }

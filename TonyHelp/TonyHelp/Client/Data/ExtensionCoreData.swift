@@ -58,12 +58,36 @@ extension NSManagedObject:DBProtocol {
             return nil;
         }
     }
+    
+    //MARK: 根据谓词获取结果
+    static func fetchNSManagedObject(_ predicate: NSPredicate,_ sortKey: String?,_ ascending: Bool = true )-> Array<NSFetchRequestResult>? {
+        guard let context = returnContext() else {
+            assertionFailure("context 为 空")
+            return nil
+        }
+        let tName = NSStringFromClass(self)
+        let request = NSFetchRequest<NSFetchRequestResult>.init(entityName:tName)
+        request.predicate = predicate
+        if sortKey != nil {
+            let sort = NSSortDescriptor.init(key: sortKey, ascending: ascending)
+            request.sortDescriptors = [sort]
+        }
+        let fetchController = NSFetchedResultsController.init(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        do {
+            try fetchController.performFetch()
+            return fetchController.fetchedObjects
+        } catch {
+            assertionFailure("fetch错误=\(error)")
+            return nil
+        }
+    }
+    
     //MARK: 获取fetch controller
-    static func createResultsController(_ sortKey: String)-> NSFetchedResultsController<NSFetchRequestResult>?{
+    static func createResultsController(_ sortKey: String,_ ascending: Bool)-> NSFetchedResultsController<NSFetchRequestResult>?{
         guard let context = returnContext() else { return nil }
         let tName = NSStringFromClass(self)
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName:tName);
-        let sort = NSSortDescriptor.init(key: sortKey, ascending: true)
+        let sort = NSSortDescriptor.init(key: sortKey, ascending: ascending)
         request.sortDescriptors = [sort]
         let fetchController = NSFetchedResultsController.init(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         return fetchController

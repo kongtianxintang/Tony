@@ -36,6 +36,7 @@ class THUserCell: UITableViewCell {
         nickname.text = bean.fetchSurplus()
         numLabel.text = bean.fetchLastOption()
         mShape.strokeEnd = bean.fetchProgress()
+        mShape.strokeColor = bean.fetchProgressColor()
         telLabel.text = bean.fetchTelPhone()
         nameLabel.text = bean.fetchNickname()
     }

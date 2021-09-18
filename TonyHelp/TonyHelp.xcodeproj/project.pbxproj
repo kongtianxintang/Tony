@@ -41,6 +41,9 @@
 		D0D39D9226D5139B00DAEC98 /* THViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */; };
 		D0FE85E826F1D8B90095451B /* THUserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85E726F1D8B90095451B /* THUserExtension.swift */; };
 		D0FE85EA26F1E1EA0095451B /* THRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85E926F1E1EA0095451B /* THRecordExtension.swift */; };
+		D0FE85ED26F435970095451B /* THResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85EC26F435970095451B /* THResultsController.swift */; };
+		D0FE85F126F455740095451B /* THDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85EF26F455740095451B /* THDetailViewController.swift */; };
+		D0FE85F226F455740095451B /* THDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FE85F026F455740095451B /* THDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,9 @@
 		D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewExtension.swift; sourceTree = "<group>"; };
 		D0FE85E726F1D8B90095451B /* THUserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THUserExtension.swift; sourceTree = "<group>"; };
 		D0FE85E926F1E1EA0095451B /* THRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THRecordExtension.swift; sourceTree = "<group>"; };
+		D0FE85EC26F435970095451B /* THResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THResultsController.swift; sourceTree = "<group>"; };
+		D0FE85EF26F455740095451B /* THDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THDetailViewController.swift; sourceTree = "<group>"; };
+		D0FE85F026F455740095451B /* THDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,8 @@
 		D010609A26CCF58F001626A0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE85EE26F4554C0095451B /* Detail */,
+				D0FE85EB26F435780095451B /* Results */,
 				D025AAD526E0E650001721C4 /* Home */,
 				D025AACF26E0A013001721C4 /* Add */,
 				D010609B26CCF821001626A0 /* Password */,
@@ -276,6 +284,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		D0FE85EB26F435780095451B /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE85EC26F435970095451B /* THResultsController.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		D0FE85EE26F4554C0095451B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE85EF26F455740095451B /* THDetailViewController.swift */,
+				D0FE85F026F455740095451B /* THDetailViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D025AAD426E0A057001721C4 /* THAddViewController.xib in Resources */,
+				D0FE85F226F455740095451B /* THDetailViewController.xib in Resources */,
 				D01060A726CD1182001626A0 /* PwNumberCell.xib in Resources */,
 				D010609F26CCFB7D001626A0 /* THPasswordController.xib in Resources */,
 				D0064A2A26A28EA200AD764E /* LaunchScreen.storyboard in Resources */,
@@ -405,6 +431,7 @@
 				D01060BC26CDE33D001626A0 /* PwDisplayManager.swift in Sources */,
 				D0064A2226A28EA100AD764E /* ViewController.swift in Sources */,
 				D01060B426CDE30D001626A0 /* AppKey+CoreDataProperties.swift in Sources */,
+				D0FE85F126F455740095451B /* THDetailViewController.swift in Sources */,
 				D0064A1E26A28EA100AD764E /* AppDelegate.swift in Sources */,
 				D0FE85E826F1D8B90095451B /* THUserExtension.swift in Sources */,
 				D01060BB26CDE33D001626A0 /* PwToast.swift in Sources */,
@@ -421,6 +448,7 @@
 				D01060A326CCFCEE001626A0 /* PwNumberLayout.swift in Sources */,
 				D0D39D9026D5134500DAEC98 /* THFloatExtension.swift in Sources */,
 				D01060B326CDE30D001626A0 /* AppKey+CoreDataClass.swift in Sources */,
+				D0FE85ED26F435970095451B /* THResultsController.swift in Sources */,
 				D0D39D9226D5139B00DAEC98 /* THViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
