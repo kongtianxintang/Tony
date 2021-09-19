@@ -8,6 +8,7 @@ tony小哥 管理助手
 # 待续...
 1.增加照片头像等
 2.二维码付款
+3.数据的cloud同步
 
 # 联系方式
 email: kongtianxintang@163.com
