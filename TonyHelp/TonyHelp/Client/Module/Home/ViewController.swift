@@ -77,6 +77,7 @@ extension ViewController: THTabbarMenuDelegate {
             let svc = UISearchController.init(searchResultsController: resultVC)
             svc.searchResultsUpdater = self
             svc.delegate = self
+            svc.searchBar.placeholder = "输入名字或电话号码"
             mSearchVC = svc
             vc = svc
         }

@@ -11,6 +11,10 @@ class THDetailViewController: UIViewController {
     private var mUser: User?
     @IBOutlet weak var tableView: UITableView!
     
+    deinit {
+        print("--销毁--\(self)")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultConfigure()
@@ -63,6 +67,7 @@ private  extension THDetailViewController {
         let height: CGFloat = 156
         header.frame.size.height = height
         tableView.tableHeaderView = header
+        tableView.rowHeight = 88
         configureHeaderView()
     }
     /// 设置页头的数据
