@@ -12,7 +12,8 @@ extension User {
     }
     /// 获取剩余进度
     func fetchProgress()-> CGFloat{
-        return CGFloat(surplus) / CGFloat(total)
+        let value = CGFloat(surplus) / CGFloat(total)
+        return value
     }
     /// 获取进度外显示的颜色
     func fetchProgressColor() -> CGColor {

@@ -44,6 +44,10 @@
 		D0FE85ED26F435970095451B /* THResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85EC26F435970095451B /* THResultsController.swift */; };
 		D0FE85F126F455740095451B /* THDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85EF26F455740095451B /* THDetailViewController.swift */; };
 		D0FE85F226F455740095451B /* THDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FE85F026F455740095451B /* THDetailViewController.xib */; };
+		D0FE85F526F60F260095451B /* THRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85F326F60F260095451B /* THRecordCell.swift */; };
+		D0FE85F626F60F260095451B /* THRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FE85F426F60F260095451B /* THRecordCell.xib */; };
+		D0FE85F826F6EAEB0095451B /* THDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85F726F6EAEB0095451B /* THDetailHeaderView.swift */; };
+		D0FE85FA26F6EDBE0095451B /* THUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85F926F6EDBE0095451B /* THUserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,10 @@
 		D0FE85EC26F435970095451B /* THResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THResultsController.swift; sourceTree = "<group>"; };
 		D0FE85EF26F455740095451B /* THDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THDetailViewController.swift; sourceTree = "<group>"; };
 		D0FE85F026F455740095451B /* THDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THDetailViewController.xib; sourceTree = "<group>"; };
+		D0FE85F326F60F260095451B /* THRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THRecordCell.swift; sourceTree = "<group>"; };
+		D0FE85F426F60F260095451B /* THRecordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THRecordCell.xib; sourceTree = "<group>"; };
+		D0FE85F726F6EAEB0095451B /* THDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THDetailHeaderView.swift; sourceTree = "<group>"; };
+		D0FE85F926F6EDBE0095451B /* THUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THUserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +305,10 @@
 			children = (
 				D0FE85EF26F455740095451B /* THDetailViewController.swift */,
 				D0FE85F026F455740095451B /* THDetailViewController.xib */,
+				D0FE85F326F60F260095451B /* THRecordCell.swift */,
+				D0FE85F426F60F260095451B /* THRecordCell.xib */,
+				D0FE85F726F6EAEB0095451B /* THDetailHeaderView.swift */,
+				D0FE85F926F6EDBE0095451B /* THUserDetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -368,6 +380,7 @@
 				D010609F26CCFB7D001626A0 /* THPasswordController.xib in Resources */,
 				D0064A2A26A28EA200AD764E /* LaunchScreen.storyboard in Resources */,
 				D025AAD926E0E708001721C4 /* THUserCell.xib in Resources */,
+				D0FE85F626F60F260095451B /* THRecordCell.xib in Resources */,
 				D0064A2726A28EA200AD764E /* Assets.xcassets in Resources */,
 				D0064A2526A28EA100AD764E /* Main.storyboard in Resources */,
 			);
@@ -424,9 +437,12 @@
 			files = (
 				D01060AF26CDE30D001626A0 /* DataBaseProtocol.swift in Sources */,
 				D01060B226CDE30D001626A0 /* Account+CoreDataClass.swift in Sources */,
+				D0FE85F826F6EAEB0095451B /* THDetailHeaderView.swift in Sources */,
 				D010609E26CCFB7D001626A0 /* THPasswordController.swift in Sources */,
+				D0FE85FA26F6EDBE0095451B /* THUserDetailView.swift in Sources */,
 				D01060A126CCFC9C001626A0 /* PwSecureView.swift in Sources */,
 				D01060A526CD117D001626A0 /* PwNumberCell.swift in Sources */,
+				D0FE85F526F60F260095451B /* THRecordCell.swift in Sources */,
 				D025AAD326E0A057001721C4 /* THAddViewController.swift in Sources */,
 				D01060BC26CDE33D001626A0 /* PwDisplayManager.swift in Sources */,
 				D0064A2226A28EA100AD764E /* ViewController.swift in Sources */,
@@ -598,14 +614,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LKFND4C422;
+				DEVELOPMENT_TEAM = C4K52PEMM5;
 				INFOPLIST_FILE = TonyHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tony.ios.TonyHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tony.iOS.Tony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -619,14 +635,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LKFND4C422;
+				DEVELOPMENT_TEAM = C4K52PEMM5;
 				INFOPLIST_FILE = TonyHelp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tony.ios.TonyHelp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tony.iOS.Tony;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

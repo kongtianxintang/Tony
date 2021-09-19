@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="THDetailViewController" customModule="TonyHelp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="vgz-YE-ymu" id="m1h-bt-2aX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,21 +20,35 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgz-YE-ymu">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgz-YE-ymu">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <color key="separatorColor" systemColor="systemGray6Color"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="fU7-mx-O7d"/>
                         <outlet property="delegate" destination="-1" id="P2k-VI-goA"/>
-                        <outlet property="prefetchDataSource" destination="-1" id="Hyw-CU-9vI"/>
                     </connections>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBg-Ih-Pej">
+                    <rect key="frame" x="350" y="744" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="33O-Gd-bHS"/>
+                        <constraint firstAttribute="height" constant="64" id="i0h-P3-I6E"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="icon_reduce"/>
+                    <connections>
+                        <action selector="didClickReduce:" destination="-1" eventType="touchUpInside" id="DdQ-vb-zGS"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="vgz-YE-ymu" secondAttribute="bottom" id="Vg5-ZJ-Sup"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EBg-Ih-Pej" secondAttribute="trailing" id="aM8-7M-VEv"/>
                 <constraint firstItem="vgz-YE-ymu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gtJ-pD-OCu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EBg-Ih-Pej" secondAttribute="bottom" constant="54" id="rRK-9P-9LL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vgz-YE-ymu" secondAttribute="trailing" id="vYe-Xg-ByB"/>
                 <constraint firstItem="vgz-YE-ymu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zpX-xi-ynA"/>
             </constraints>
@@ -41,9 +56,7 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="icon_reduce" width="32" height="32"/>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

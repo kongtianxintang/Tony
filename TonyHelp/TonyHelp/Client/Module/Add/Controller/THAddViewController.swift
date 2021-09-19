@@ -49,6 +49,7 @@ class THAddViewController: UIViewController {
         entiy.name = nickname
         entiy.tel = tel
         entiy.surplus = num
+        entiy.total = num
         
         User.coreDataSave {[weak self] flag in
             self?.dismiss(animated: true, completion: nil)
