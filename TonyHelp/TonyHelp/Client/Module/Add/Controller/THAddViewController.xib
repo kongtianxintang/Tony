@@ -24,10 +24,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynr-1Q-NtO">
-                    <rect key="frame" x="24" y="88" width="366" height="180"/>
+                    <rect key="frame" x="12" y="88" width="390" height="180"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="unc-P3-pyH">
-                            <rect key="frame" x="0.0" y="24" width="366" height="44"/>
+                            <rect key="frame" x="0.0" y="24" width="390" height="44"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUh-M8-c37">
                                     <rect key="frame" x="12" y="13" width="42" height="18"/>
@@ -39,12 +39,12 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vE4-d2-aml">
-                                    <rect key="frame" x="66" y="13" width="288" height="18.5"/>
+                                    <rect key="frame" x="66" y="13" width="312" height="18.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnW-CK-BcK">
-                                    <rect key="frame" x="12" y="43" width="342" height="1"/>
+                                    <rect key="frame" x="12" y="43" width="366" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="qdu-7A-P91"/>
@@ -65,7 +65,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGJ-xR-818">
-                            <rect key="frame" x="0.0" y="68" width="366" height="44"/>
+                            <rect key="frame" x="0.0" y="68" width="390" height="44"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAI-Zj-wRj">
                                     <rect key="frame" x="12" y="13" width="42" height="18"/>
@@ -77,12 +77,12 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g1A-pp-c4Y">
-                                    <rect key="frame" x="66" y="13" width="288" height="18.5"/>
+                                    <rect key="frame" x="66" y="13" width="312" height="18.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJm-eN-Gh9">
-                                    <rect key="frame" x="12" y="43" width="342" height="1"/>
+                                    <rect key="frame" x="12" y="43" width="366" height="1"/>
                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="bax-Jn-B4y"/>
@@ -103,7 +103,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9s-Wx-Pwm">
-                            <rect key="frame" x="0.0" y="112" width="366" height="44"/>
+                            <rect key="frame" x="0.0" y="112" width="390" height="44"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="次数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJy-Ix-uPi">
                                     <rect key="frame" x="12" y="13" width="42" height="18"/>
@@ -115,7 +115,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0tc-WS-0cb">
-                                    <rect key="frame" x="66" y="13" width="288" height="18.5"/>
+                                    <rect key="frame" x="66" y="13" width="312" height="18.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -173,10 +173,10 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ynr-1Q-NtO" secondAttribute="trailing" constant="24" id="HWW-X0-ctW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ynr-1Q-NtO" secondAttribute="trailing" constant="12" id="HWW-X0-ctW"/>
                 <constraint firstItem="YoP-bP-6KV" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="LvR-sx-7F1"/>
                 <constraint firstItem="YoP-bP-6KV" firstAttribute="top" secondItem="Ynr-1Q-NtO" secondAttribute="bottom" constant="44" id="OuG-XQ-Qbb"/>
-                <constraint firstItem="Ynr-1Q-NtO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Q7b-PS-yBg"/>
+                <constraint firstItem="Ynr-1Q-NtO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Q7b-PS-yBg"/>
                 <constraint firstItem="Ynr-1Q-NtO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="xb2-0I-tWW"/>
             </constraints>
             <point key="canvasLocation" x="121.73913043478262" y="85.714285714285708"/>

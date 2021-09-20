@@ -11,10 +11,6 @@ class THDetailViewController: UIViewController {
     private var mUser: User?
     @IBOutlet weak var tableView: UITableView!
     
-    deinit {
-        print("--销毁--\(self)")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultConfigure()
@@ -51,7 +47,6 @@ private  extension THDetailViewController {
     }
     /// 配置tableview
     func configureTableView(){
-        tableView.layer.cornerRadius = 4
         let nib = UINib.init(nibName: "THRecordCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: THRecordCell.reuse)
         attachTableViewHeaderView()
@@ -67,7 +62,7 @@ private  extension THDetailViewController {
         let height: CGFloat = 156
         header.frame.size.height = height
         tableView.tableHeaderView = header
-        tableView.rowHeight = 88
+        tableView.rowHeight = 54
         configureHeaderView()
     }
     /// 设置页头的数据
@@ -92,9 +87,18 @@ extension THDetailViewController: UITableViewDataSource,UITableViewDelegate {
         return set.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: THRecordCell.reuse, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: THRecordCell.reuse, for: indexPath) as! THRecordCell
         if let bean = mUser?.record?.object(at: indexPath.row) as? Record{
-            cell.textLabel?.text = bean.fetchRecordDesc()
+            let count = mUser!.record!.count
+            var type: THCellRadiusType = .None
+            if indexPath.row == 0 {
+                type = .Top
+            }else if indexPath.row >= (count - 1) {
+                type = .Bottom
+            }else {
+                
+            }
+            cell.setData(bean, false,type)
         }
         return cell
     }

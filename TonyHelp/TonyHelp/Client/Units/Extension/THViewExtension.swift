@@ -62,3 +62,27 @@ extension UIView {
         self.layer.add(stroke, forKey: nil)
     }
 }
+
+/// 对CGRect的扩展
+extension CGRect {
+    func th_radiusPath(_ type: THCellRadiusType,_ radius: CGFloat = 6) -> CGPath {
+        var path: UIBezierPath!
+        let rect = self
+        let size = CGSize.init(width: radius, height: radius)
+        switch type {
+        case .Both:
+            path = UIBezierPath.init(roundedRect: rect, cornerRadius: radius)
+        case .Left:
+            path = UIBezierPath.init(roundedRect: rect, byRoundingCorners: [.topLeft,.bottomLeft], cornerRadii: size)
+        case .Right:
+            path = UIBezierPath.init(roundedRect: rect, byRoundingCorners: [.topRight, .bottomRight], cornerRadii: size)
+        case .Bottom:
+            path = UIBezierPath.init(roundedRect: rect, byRoundingCorners: [.bottomRight, .bottomLeft], cornerRadii: size)
+        case .Top:
+            path = UIBezierPath.init(roundedRect: rect, byRoundingCorners: [.topRight,.topLeft], cornerRadii: size)
+        default:
+            path = UIBezierPath.init(rect: rect)
+        }
+        return path.cgPath
+    }
+}

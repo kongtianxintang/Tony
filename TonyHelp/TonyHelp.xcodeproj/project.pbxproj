@@ -39,6 +39,7 @@
 		D05F060C26DC82660021E5BD /* THMenuLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */; };
 		D0D39D9026D5134500DAEC98 /* THFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */; };
 		D0D39D9226D5139B00DAEC98 /* THViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */; };
+		D0E0F34C26F8230A0086B488 /* THCellRadiusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E0F34B26F8230A0086B488 /* THCellRadiusType.swift */; };
 		D0FE85E826F1D8B90095451B /* THUserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85E726F1D8B90095451B /* THUserExtension.swift */; };
 		D0FE85EA26F1E1EA0095451B /* THRecordExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85E926F1E1EA0095451B /* THRecordExtension.swift */; };
 		D0FE85ED26F435970095451B /* THResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE85EC26F435970095451B /* THResultsController.swift */; };
@@ -87,6 +88,7 @@
 		D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THMenuLoaderView.swift; sourceTree = "<group>"; };
 		D0D39D8F26D5134500DAEC98 /* THFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THFloatExtension.swift; sourceTree = "<group>"; };
 		D0D39D9126D5139B00DAEC98 /* THViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewExtension.swift; sourceTree = "<group>"; };
+		D0E0F34B26F8230A0086B488 /* THCellRadiusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THCellRadiusType.swift; sourceTree = "<group>"; };
 		D0FE85E726F1D8B90095451B /* THUserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THUserExtension.swift; sourceTree = "<group>"; };
 		D0FE85E926F1E1EA0095451B /* THRecordExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THRecordExtension.swift; sourceTree = "<group>"; };
 		D0FE85EC26F435970095451B /* THResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THResultsController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				D01060C226D381A9001626A0 /* THTabbarMenu.swift */,
 				D05F060B26DC82660021E5BD /* THMenuLoaderView.swift */,
+				D0E0F34B26F8230A0086B488 /* THCellRadiusType.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				D025AADB26E1EB2C001721C4 /* DateExtension.swift in Sources */,
 				D025AAD826E0E708001721C4 /* THUserCell.swift in Sources */,
 				D01060C026CDE52C001626A0 /* TonyHelp.xcdatamodeld in Sources */,
+				D0E0F34C26F8230A0086B488 /* THCellRadiusType.swift in Sources */,
 				D01060C326D381A9001626A0 /* THTabbarMenu.swift in Sources */,
 				D0FE85EA26F1E1EA0095451B /* THRecordExtension.swift in Sources */,
 				D01060BD26CDE33D001626A0 /* PwActionView.swift in Sources */,
