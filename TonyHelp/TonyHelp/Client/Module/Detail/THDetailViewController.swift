@@ -18,11 +18,15 @@ class THDetailViewController: UIViewController {
     @IBAction func didClickReduce(_ sender: UIButton) {
         guard let user = mUser else { return }
         user.surplus -= 1
-        if let re = Record.createEntiy() as? Record{
-            re.date = Date()
-            re.type = 1
-            re.desc = "消费一次"
-            user.addToRecord(re)
+        if user.surplus < 0 {
+            user.surplus = 0
+        }else {
+            if let re = Record.createEntiy() as? Record{
+                re.date = Date()
+                re.type = 1
+                re.desc = "消费一次"
+                user.addToRecord(re)
+            }
         }
         Record.coreDataSave {[unowned self] flag in
             self.tableView.reloadData()

@@ -8,15 +8,21 @@ import UIKit
 extension User {
     /// 获取剩余次数
     func fetchSurplus()-> String{
-        return "剩余\(surplus)次"
+        return surplus > 0 ? "剩余\(surplus)次": "无剩余"
     }
     /// 获取剩余进度
     func fetchProgress()-> CGFloat{
+        guard surplus > 0 else {
+            return 1
+        }
         let value = CGFloat(surplus) / CGFloat(total)
         return value
     }
     /// 获取进度外显示的颜色
     func fetchProgressColor() -> CGColor {
+        guard surplus > 0 else {
+            return UIColor.systemGray6.cgColor
+        }
         var color: UIColor = UIColor.blue
         let value = fetchProgress()
         switch value {
